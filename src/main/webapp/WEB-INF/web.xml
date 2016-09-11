@@ -18,14 +18,25 @@
         <url-pattern>*.form</url-pattern>
     </servlet-mapping>
 
-    <!-- filter: 过滤器 -->
+    <!-- firstFilter: 过滤器 -->
     <filter>
         <filter-name>FirstFilter</filter-name>
         <filter-class>cn.rayest.filter.FirstFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>FirstFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/index.jsp</url-pattern>
     </filter-mapping>
+
+    <!-- secondFilter: 过滤器 -->
+    <filter>
+        <filter-name>SecondFilter</filter-name>
+        <filter-class>cn.rayest.filter.SecondFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecondFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
 </web-app>
         
